@@ -1,0 +1,46 @@
+@startuml
+interface Runnable {
++ void Run()
+}
+
+class Cat {
++ void makeSound()
++ void eat()
++ void Run()
+}
+
+class Dog {
++ void makeSound()
++ void eat()
++ void Run()
+}
+
+class Bird {
++ void makeSound()
++ void eat()
++ void fly()
+}
+
+interface FlyAble {
++ void fly()
+}
+
+abstract class Animal {
++ {abstract}void makeSound()
++ {abstract}void eat()
+}
+
+class MainActivity {
+# void onCreate(Bundle)
+}
+
+
+
+Runnable <|.. Cat
+Animal <|-- Cat
+Runnable <|.. Dog
+Animal <|-- Dog
+FlyAble <|.. Bird
+Animal <|-- Bird
+AppCompatActivity <|-- MainActivity
+@enduml
